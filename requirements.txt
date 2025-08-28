@@ -1,13 +1,13 @@
 # 2025/0828_fuku
-opencv-python=4.5.1.48
-python-jsonrpc-server=0.3.4
-ujson=1.35
-jsonschema=3.2.0
-numpy=1.20.3
-numpydoc=1.1.0
-onnxruntime=1.7.0
-pandas=1.2.4
-matplotlib=3.4.1
+opencv-python==4.5.1.48
+python-jsonrpc-server==0.3.4
+ujson==1.35
+jsonschema==3.2.0
+numpy==1.20.3
+numpydoc==1.1.0
+onnxruntime==1.7.0
+pandas==1.2.4
+matplotlib==3.4.1
 
 # 元文
 # opencv-python=4.5.1.48=pypi_0
