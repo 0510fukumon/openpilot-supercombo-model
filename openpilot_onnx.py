@@ -6,6 +6,9 @@ import pandas as pd
 
 from matplotlib import pyplot as plt
 
+import matplotlib  # デバッグ用追加 20250829 fuku
+matplotlib.use('TkAgg')  # デバッグ用追加 20250829 fuku
+
 X_IDXS = np.array([ 0. ,   0.1875,   0.75  ,   1.6875,   3.    ,   4.6875,
          6.75  ,   9.1875,  12.    ,  15.1875,  18.75  ,  22.6875,
         27.    ,  31.6875,  36.75  ,  42.1875,  48.    ,  54.1875,
@@ -36,9 +39,10 @@ def seperate_points_and_std_values(df):
 	return points, std
 
 def main():
+	print("main start") # 追加 20250828_fuku
 	model = "supercombo.onnx"
-	
-	cap = cv2.VideoCapture('data/cropped_plats.mp4')
+	cap = cv2.VideoCapture('data/test_move.mp4') # test_move change 20250828 fuku
+	print("video opened:", cap.isOpened())  # 追加 20250828 fuku
 	parsed_images = []
 
 	width = 512
