@@ -7,7 +7,6 @@ import pandas as pd
 from matplotlib import pyplot as plt
 
 #今から改造開始_20250828_fuku
-#確認コメント追加_2050828_fuku
 
 X_IDXS = np.array([ 0. ,   0.1875,   0.75  ,   1.6875,   3.    ,   4.6875,
          6.75  ,   9.1875,  12.    ,  15.1875,  18.75  ,  22.6875,
