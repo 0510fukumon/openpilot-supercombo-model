@@ -6,6 +6,9 @@ import pandas as pd
 
 from matplotlib import pyplot as plt
 
+import matplotlib  # 可視化ツール追加 20250829 fuku
+matplotlib.use('TkAgg')  # 描画指定追加 20250829 fuku
+
 X_IDXS = np.array([ 0. ,   0.1875,   0.75  ,   1.6875,   3.    ,   4.6875,
          6.75  ,   9.1875,  12.    ,  15.1875,  18.75  ,  22.6875,
         27.    ,  31.6875,  36.75  ,  42.1875,  48.    ,  54.1875,
@@ -36,9 +39,10 @@ def seperate_points_and_std_values(df):
 	return points, std
 
 def main():
+	print("main start") # mainstart追加 20250828_fuku
 	model = "supercombo.onnx"
-	
-	cap = cv2.VideoCapture('data/cropped_plats.mp4')
+	cap = cv2.VideoCapture('data/test_move_2.mp4') # test_move change 20250828 fuku
+	print("video opened:", cap.isOpened())  # 動画プリント追加 20250828 fuku
 	parsed_images = []
 
 	width = 512
@@ -190,8 +194,7 @@ def main():
 			plt.title("Raod lines")
 			plt.xlabel("red - road lines | green - predicted path | yellow - lane lines")
 			plt.ylabel("Range")
-			plt.show()
-			plt.pause(0.1)
+			plt.pause(0.001) # 処理値変更 20250829 fuku
 			plt.clf()
 
 		frame = cv2.resize(frame, (900, 500))
@@ -205,3 +208,7 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
+	# 20250829 fukku fin
+	# 20250902 save fuku fin
+	# 20250903 save fuku fin
